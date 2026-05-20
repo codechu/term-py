@@ -1,9 +1,16 @@
 ```text
-   ┌──────────────────────────────────────────────────┐
-   │  c o d e c h u — t e r m                         │
-   │  $ _                                             │
-   │  ····TTY detection · alt buffer · raw mode······ │
-   └──────────────────────────────────────────────────┘
+━━━━━━━━━━━━ c o d e c h u  ·  t e r m ━━━━━━━━━━━━
+
+   >>> capabilities(sys.stdout)
+   {
+       'color':       True,    'truecolor':    True,
+       'unicode':     True,    'emoji':        True,
+       'mouse':       True,    'alt_buffer':   True,
+   }
+
+   $ _    ← raw mode · alt buffer · cursor control · resize
+
+━━━━━ "what can this terminal actually do?" ━━━━━━
 ```
 
 [![PyPI](https://img.shields.io/pypi/v/codechu-term.svg)](https://pypi.org/project/codechu-term/)
@@ -19,13 +26,6 @@ Stdlib-only terminal-capability detection and low-level terminal
 control. The "what can this terminal actually do?" question
 answered as a dictionary, plus the context managers you reach for
 when you need full-screen mode, raw input, or resize handling.
-
-```text
->>> capabilities(sys.stdout)
-{'color':       True,   'truecolor':    True,
- 'unicode':     True,   'emoji':        True,
- 'mouse':       True,   'alt_buffer':   True}
-```
 
 ## Install
 
