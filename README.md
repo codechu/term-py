@@ -6,6 +6,11 @@
    └──────────────────────────────────────────────────┘
 ```
 
+[![PyPI](https://img.shields.io/pypi/v/codechu-term.svg)](https://pypi.org/project/codechu-term/)
+[![Python](https://img.shields.io/pypi/pyversions/codechu-term.svg)](https://pypi.org/project/codechu-term/)
+[![CI](https://github.com/codechu/term-py/actions/workflows/ci.yml/badge.svg)](https://github.com/codechu/term-py/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 > *Terminal capability detection and low-level control, stdlib-only.*
 
 # codechu-term
@@ -130,6 +135,35 @@ pytest -q
 
 Tests that require a real TTY (raw mode, SIGWINCH propagation) skip
 themselves when running headless.
+
+## Documentation
+
+- [API reference](docs/API.md) — every public symbol, signatures, edge cases
+
+## Codechu family
+
+Companion libraries from the Codechu Python ecosystem:
+
+| Library | Purpose |
+|---------|---------|
+| [codechu-fmt](https://pypi.org/project/codechu-fmt/) | Human-readable formatting — sizes, durations, rates, percent |
+| [codechu-meter](https://pypi.org/project/codechu-meter/) | Timing primitives — Stopwatch, ETA, percentile, histogram |
+| [codechu-spark](https://pypi.org/project/codechu-spark/) | Unicode sparklines, mini bar charts, heatmaps |
+| [codechu-cli](https://pypi.org/project/codechu-cli/) | CLI primitives — colors, progress, spinners, prompts, table |
+| [codechu-events](https://pypi.org/project/codechu-events/) | Thread-safe multi-channel pub/sub bus with replay |
+| [codechu-xdg](https://pypi.org/project/codechu-xdg/) | XDG Base Directory helpers, vendor-namespaced |
+| [codechu-treeviz](https://pypi.org/project/codechu-treeviz/) | Tree visualization — treemap, sunburst, icicle, flame |
+| [codechu-fs](https://pypi.org/project/codechu-fs/) | Filesystem primitives — atomic write, XDG trash, safe walk |
+| [codechu-color](https://pypi.org/project/codechu-color/) | Color palettes, WCAG contrast, color-blind variants |
+| [codechu-treedata](https://pypi.org/project/codechu-treedata/) | N-ary tree data structures and algorithms |
+| [codechu-log](https://pypi.org/project/codechu-log/) | Structured logging — context, JSON, rotation, redaction |
+| [codechu-i18n](https://pypi.org/project/codechu-i18n/) | Internationalization — locale, plural rules, RTL |
+| [codechu-ipc](https://pypi.org/project/codechu-ipc/) | Local IPC — Unix socket, FIFO, JSON-line protocol |
+| [codechu-config](https://pypi.org/project/codechu-config/) | Schema-driven config — atomic save, migrations |
+
+## Credits
+
+- Built on stdlib termios + select; SIGWINCH handling per POSIX.
 
 ## License
 
