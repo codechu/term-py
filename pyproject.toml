@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codechu-term"
+version = "0.1.0"
+description = "Stdlib-only terminal capability detection and low-level terminal control."
+readme = "README.md"
+license = { file = "LICENSE" }
+
+requires-python = ">=3.10"
+authors = [{ name = "Codechu" }]
+keywords = ["terminal", "tty", "ansi", "capabilities", "alt-buffer", "raw-mode", "stdlib"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Terminals",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=4.1", "ruff>=0.4"]
+
+[project.urls]
+Homepage = "https://github.com/codechu/term-py"
+Source = "https://github.com/codechu/term-py"
+Issues = "https://github.com/codechu/term-py/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

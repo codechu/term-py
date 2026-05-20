@@ -1,0 +1,12 @@
+# Auto LF normalize: text files stored LF, OS-default on checkout
+* text=auto eol=lf
+
+# Binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+
+# Python: linguist-language
+*.py linguist-language=Python
